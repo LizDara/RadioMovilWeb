@@ -1,0 +1,80 @@
+@use "@material/button/styles";
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+@use "@material/switch";
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/drawer";
+@use "@material/list";
+
+@include textfield.core-styles;
+@include switch.core-styles;
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
+@include list.core-styles;
+
+#item-selected {
+  background-color: #FFBB00;
+}
+
+#item-text-selected, #item-icon-selected {
+  color: white;
+}
+
+.logout-button, .edit-profile-button {
+  width: 100%;
+}
+
+.edit-profile-button {
+  --mdc-theme-primary: #000000;
+}
+
+.logout-button {
+  --mdc-theme-primary: #ab0000;
+  margin-top: 16px;
+}
+
+#final-buttons {
+  margin: 8px;
+}
+
+.demo-width-class {
+  --mdc-theme-primary: #FFBB00;
+  margin-top: 16px;
+  width: 400px;
+}
+
+.add-viaje-button {
+  --mdc-theme-primary: #FFBB00;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.fecha, .hora, .punto-partida, .punto-llegada {
+  --mdc-theme-primary: #FFBB00;
+  width: 100%;
+  margin-top: 16px;
+  @include textfield.label-color(#000000);
+}
+
+.mdc-floating-label {
+  color: black !important;
+}
+
+@include textfield.core-styles;
+@include switch.core-styles;
+
+#login-form, #second-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#second-content {
+  background: antiquewhite;
+  justify-content: center;
+}

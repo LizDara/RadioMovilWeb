@@ -1,0 +1,71 @@
+@use "@material/button/styles" as button-style;
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+@use "@material/switch";
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/select/styles" as select-style;
+
+.demo-width-class {
+  --mdc-theme-primary: #FFBB00;
+  margin-top: 16px;
+  width: 400px;
+}
+
+.mdc-floating-label {
+  color: black !important;
+}
+
+@include textfield.core-styles;
+@include switch.core-styles;
+
+.login-button {
+  --mdc-theme-primary: #FFBB00;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {
+  background-color: #FFBB00 !important;
+  border-color: #FFBB00 !important;
+}
+
+.mdc-switch.mdc-switch--checked .mdc-switch__thumb {
+  background-color: black !important;
+  border-color: black !important;
+}
+
+.mdc-switch.mdc-switch--checked .mdc-switch__track {
+  background-color: #FFBB00 !important;
+}
+
+.dni, .first-name, .last-name, .phone, .address, .email, .password, .birthdate {
+  --mdc-theme-primary: #FFBB00;
+  width: 100%;
+  margin-top: 16px;
+  @include textfield.label-color(#000000);
+}
+
+#login-form, #second-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#theme-col {
+  margin-left: 16px;
+  margin-top: 24px;
+}
+
+h6 {
+  text-align: center;
+  padding: 16px;
+}
+
+#second-content {
+  background: antiquewhite;
+  justify-content: center;
+}

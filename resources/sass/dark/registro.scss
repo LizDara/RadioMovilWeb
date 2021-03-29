@@ -1,0 +1,102 @@
+@use "@material/button/styles" as button-style;
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+@use "@material/switch";
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/select/styles" as select-style;
+@use '@material/select';
+
+body {
+  background: #14213D;
+}
+
+h1 {
+  color: white;
+}
+
+.demo-width-class {
+  --mdc-theme-primary: #FFBB00;
+  margin-top: 16px;
+  width: 400px;
+}
+
+.mdc-floating-label {
+  color: black !important;
+}
+
+@include textfield.core-styles;
+@include switch.core-styles;
+
+.login-button {
+  --mdc-theme-primary: #D69D00;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {
+  background-color: #FFBB00 !important;
+  border-color: #FFBB00 !important;
+}
+
+.mdc-switch.mdc-switch--checked .mdc-switch__thumb {
+  background-color: black !important;
+  border-color: black !important;
+}
+
+.mdc-switch.mdc-switch--checked .mdc-switch__track {
+  background-color: #FFBB00 !important;
+}
+
+.switch-icon {
+  color: white;
+}
+
+.mdc-text-field {
+  width: 100%;
+  margin-top: 16px;
+  @include textfield.ink-color(#FFFFFF);
+  @include textfield.caret-color(#FFFFFF);
+  @include textfield.outline-color(#727272);
+  @include textfield.hover-outline-color(#b0b0b0);
+  @include textfield.focused-outline-color(#FFFFFF);
+}
+
+$select-colors: ("default": #727272, "hover": #b0b0b0, "focus": #FFFFFF);
+
+.mdc-select {
+  @include select.outline-color($select-colors);
+  @include select.dropdown-icon-color($select-colors);
+  @include select.ink-color(#FFFFFF);
+}
+
+#login-form, #second-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#second-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #212121;
+}
+
+#theme-col {
+  margin-left: 16px;
+  margin-top: 24px;
+}
+
+.mdc-floating-label {
+  color: #bfbfbf !important;
+}
+
+h6 {
+  color: white;
+  text-align: center;
+  padding: 16px;
+}

@@ -1,0 +1,64 @@
+@use "@material/button/styles";
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+@use "@material/switch";
+@use "@material/textfield/helper-text";
+@use "@material/drawer";
+@use "@material/list";
+@use "@material/card";
+
+@include textfield.core-styles;
+@include switch.core-styles;
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
+@include list.core-styles;
+@include card.core-styles;
+
+.mdc-card {
+  @include card.fill-color(#cce2e5);
+}
+
+.more-info-button {
+  --mdc-theme-primary: #111111;
+}
+
+#item-selected {
+  background-color: #FFBB00;
+}
+
+#item-text-selected, #item-icon-selected {
+  color: white;
+}
+
+.logout-button, .edit-profile-button {
+  width: 100%;
+}
+
+.edit-profile-button {
+  --mdc-theme-primary: #000000;
+}
+
+.logout-button {
+  --mdc-theme-primary: #ab0000;
+  margin-top: 16px;
+}
+
+#final-buttons {
+  margin: 8px;
+}
+
+#login-form, #second-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#login-form {
+  background-color: white;
+}
+
+#second-content {
+  background-color: antiquewhite;
+}

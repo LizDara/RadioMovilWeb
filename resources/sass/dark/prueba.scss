@@ -1,0 +1,16 @@
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+
+@include textfield.core-styles;
+
+.mdc-text-field {
+  @include textfield.ink-color(#FFFFFF);
+  @include textfield.disabled-label-color(#FFFFFF);
+  @include textfield.outline-color(#FFFFFF);
+}
+
+.mdc-text-field:not(.mdc-text-field--focused) {
+  @include textfield.disabled-label-color(#FFFFFF);
+}

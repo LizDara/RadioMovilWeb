@@ -1,0 +1,129 @@
+@use "@material/button/styles" as button-style;
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+@use "@material/switch";
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/select/styles" as select-style;
+@use "@material/drawer";
+@use "@material/list";
+@use '@material/select';
+
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
+@include list.core-styles;
+
+body {
+  background: #14213D;
+}
+
+h1 {
+  color: white;
+}
+
+.switch-icon {
+  color: white;
+}
+
+.demo-width-class {
+  --mdc-theme-primary: #FFBB00;
+  margin-top: 16px;
+  width: 400px;
+}
+
+.mdc-floating-label {
+  color: black !important;
+}
+
+@include textfield.core-styles;
+@include switch.core-styles;
+
+#register-button {
+  --mdc-theme-primary: #D69D00;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {
+  background-color: #FFBB00 !important;
+  border-color: #FFBB00 !important;
+}
+
+.mdc-switch.mdc-switch--checked .mdc-switch__thumb {
+  background-color: black !important;
+  border-color: black !important;
+}
+
+.mdc-switch.mdc-switch--checked .mdc-switch__track {
+  background-color: #FFBB00 !important;
+}
+
+.dni, .first-name, .last-name, .phone, .address, .email, .password, .birthdate {
+  --mdc-theme-primary: #FFBB00;
+  width: 100%;
+  margin-top: 16px;
+  @include textfield.label-color(#000000);
+}
+
+.edit-profile-button {
+  --mdc-theme-primary: #ffffff;
+}
+
+.logout-button, .edit-profile-button {
+  width: 100%;
+}
+
+.logout-button {
+  --mdc-theme-primary: #b34c4c;
+  margin-top: 16px;
+}
+
+#final-buttons {
+  margin: 8px;
+}
+
+.mdc-drawer {
+  @include drawer.surface-fill-color(#212121);
+  @include drawer.title-ink-color(#FFFFFF);
+  @include drawer.subtitle-ink-color(#FFFFFF);
+  @include drawer.item-icon-ink-color(#FFFFFF);
+  @include drawer.item-text-ink-color(#FFFFFF);
+  @include drawer.border-color(#212121);
+}
+
+.mdc-text-field {
+  width: 100%;
+  margin-top: 16px;
+  @include textfield.ink-color(#FFFFFF);
+  @include textfield.caret-color(#FFFFFF);
+  @include textfield.outline-color(#727272);
+  @include textfield.hover-outline-color(#b0b0b0);
+  @include textfield.focused-outline-color(#FFFFFF);
+}
+
+$select-colors: ("default": #727272, "hover": #b0b0b0, "focus": #FFFFFF);
+
+.mdc-select {
+  @include select.outline-color($select-colors);
+  @include select.dropdown-icon-color($select-colors);
+  @include select.ink-color(#FFFFFF);
+}
+
+.mdc-floating-label {
+  color: #bfbfbf !important;
+}
+
+#login-form, #second-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#second-content {
+  background: #212121;
+  justify-content: center;
+}

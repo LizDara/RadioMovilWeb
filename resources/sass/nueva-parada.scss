@@ -1,0 +1,104 @@
+@use "@material/button/styles";
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+@use "@material/switch";
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/drawer";
+@use "@material/list";
+@use "@material/card";
+@use "@material/dialog";
+
+@include dialog.core-styles;
+@include card.core-styles;
+@include textfield.core-styles;
+@include switch.core-styles;
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
+@include list.core-styles;
+
+.mdc-card {
+  @include card.fill-color(#cce2e5);
+}
+
+.mdc-dialog {
+  --mdc-theme-primary: #a7821e;
+}
+
+.edit-card-button, .remove-card-button {
+  --mdc-theme-primary: #111111;
+}
+
+.mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {
+  background-color: #FFBB00 !important;
+  border-color: #FFBB00 !important;
+}
+
+.mdc-switch.mdc-switch--checked .mdc-switch__thumb {
+  background-color: black !important;
+  border-color: black !important;
+}
+
+.mdc-switch.mdc-switch--checked .mdc-switch__track {
+  background-color: #FFBB00 !important;
+}
+
+#item-selected {
+  background-color: #faebd7;
+}
+
+#item-text-selected, #item-icon-selected {
+  color: #9e8130;
+}
+
+.logout-button, .edit-profile-button {
+  width: 100%;
+}
+
+.edit-profile-button {
+  --mdc-theme-primary: #000000;
+}
+
+.logout-button {
+  --mdc-theme-primary: #ab0000;
+  margin-top: 16px;
+}
+
+#final-buttons {
+  margin: 8px;
+}
+
+.demo-width-class {
+  --mdc-theme-primary: #FFBB00;
+  margin-top: 16px;
+  width: 400px;
+}
+
+.add-parada-button {
+  --mdc-theme-primary: #FFBB00;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.nombre, .direccion, .nombre-edit, .direccion-edit {
+  --mdc-theme-primary: #FFBB00;
+  width: 100%;
+  margin-top: 16px;
+  @include textfield.label-color(#000000);
+}
+
+.mdc-floating-label {
+  color: black !important;
+}
+
+@include textfield.core-styles;
+@include switch.core-styles;
+
+#second-content {
+  background: antiquewhite;
+  justify-content: center;
+}

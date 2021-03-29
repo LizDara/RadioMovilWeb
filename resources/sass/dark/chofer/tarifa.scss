@@ -1,0 +1,126 @@
+@use "@material/button/styles";
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+@use "@material/switch";
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/drawer";
+@use "@material/list";
+@use "@material/card";
+@use "@material/dialog";
+
+@include dialog.core-styles;
+@include card.core-styles;
+@include textfield.core-styles;
+@include switch.core-styles;
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
+@include list.core-styles;
+
+body {
+  background: #14213D;
+}
+
+h1, h2 {
+  color: white;
+}
+
+.mdc-card {
+  @include card.fill-color(#5BAFC2);
+}
+
+.mdc-dialog {
+  --mdc-theme-primary: #a7821e;
+}
+
+.mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {
+  background-color: #FFBB00 !important;
+  border-color: #FFBB00 !important;
+}
+
+.mdc-switch.mdc-switch--checked .mdc-switch__thumb {
+  background-color: black !important;
+  border-color: black !important;
+}
+
+.mdc-switch.mdc-switch--checked .mdc-switch__track {
+  background-color: #FFBB00 !important;
+}
+
+#item-selected {
+  background-color: #4c4c4c;
+}
+
+#item-text-selected, #item-icon-selected {
+  color: white;
+}
+
+.logout-button, .edit-profile-button {
+  width: 100%;
+}
+
+.edit-profile-button {
+  --mdc-theme-primary: #ffffff;
+}
+
+.logout-button {
+  --mdc-theme-primary: #b34c4c;
+  margin-top: 16px;
+}
+
+#final-buttons {
+  margin: 8px;
+}
+
+.demo-width-class {
+  margin-top: 16px;
+  width: 400px;
+}
+
+.add-permiso-button {
+  --mdc-theme-primary: #D69D00;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.mdc-list-divider {
+  color: #727272;
+}
+
+.mdc-drawer {
+  @include drawer.surface-fill-color(#212121);
+  @include drawer.title-ink-color(#FFFFFF);
+  @include drawer.subtitle-ink-color(#FFFFFF);
+  @include drawer.item-icon-ink-color(#FFFFFF);
+  @include drawer.item-text-ink-color(#FFFFFF);
+  @include drawer.border-color(#212121);
+}
+
+.switch-icon {
+  color: white;
+}
+
+.mdc-text-field {
+  width: 100%;
+  margin-top: 16px;
+  @include textfield.ink-color(#FFFFFF);
+  @include textfield.caret-color(#FFFFFF);
+  @include textfield.outline-color(#727272);
+  @include textfield.hover-outline-color(#b0b0b0);
+  @include textfield.focused-outline-color(#FFFFFF);
+}
+
+.mdc-floating-label {
+  color: #bfbfbf !important;
+}
+
+@include switch.core-styles;
+
+#second-content {
+  background: #212121;
+  justify-content: center;
+}
